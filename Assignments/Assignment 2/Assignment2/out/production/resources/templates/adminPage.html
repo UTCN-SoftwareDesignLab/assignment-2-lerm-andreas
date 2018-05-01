@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!--     <p th:text="${ bookDtoList }" /> -->
+
+
+<form action="#" th:action="@{/allBooks}"  method="post">
+
+    <p><input type="submit" class="button"  value="View all books" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/getBookForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="View book by ISBN" />
+    </p>
+</form>
+
+
+<form action="#" th:action="@{/createBookForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="Create book" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/deleteBookForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="Delete book" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/updateBookForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="Update book" />
+    </p>
+</form>
+
+
+
+
+<form action="#" th:action="@{/allUsers}"  method="post">
+
+    <p><input type="submit" class="button"  value="View all users" />
+    </p>
+</form>
+
+
+<form action="#" th:action="@{/createUserForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="Create user" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/deleteUserForm}"  method="get">
+
+    <p><input type="submit" class="button"  value="Delete user" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/updateUser}"  method="post">
+
+    <p><input type="submit" class="button"  value="Update user" />
+    </p>
+</form>
+
+
+
+<form action="#" th:action="@{/generatePDFReport}"  method="post">
+
+    <p><input type="submit" class="button"  value="Generate PDF report" />
+    </p>
+</form>
+
+<form action="#" th:action="@{/generateCSVReport}"  method="post">
+
+    <p><input type="submit" class="button"  value="Generate CSV report" />
+    </p>
+</form>
+
+</body>
+</html>

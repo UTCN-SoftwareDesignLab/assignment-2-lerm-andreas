@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Select ISBN of the book you want to delete</h1>
+<form action="#" th:action="@{/deleteForm}" th:object="${book}" method="post">
+    <p>Isbn:    <input type="text" th:field="*{isbn}" /></p> <td th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">Isbn Error</td>
+    <p><input type="submit" value="Delete book" />
+     <button type="submit" formaction="/deleteBook"  value="Delete book" >Delete book</button>
+    </p>
+</form>
+</body>
+</html>

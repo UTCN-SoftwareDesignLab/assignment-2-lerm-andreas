@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Select username of the user you want to delete</h1>
+<form action="#" th:action="@{/deleteUserForm}" th:object="${user}" method="post">
+
+    <p>Username:    <input type="text" th:field="*{userName}" /></p>  <td th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Username Error</td>
+    <p><input type="submit" value="Validate user" />
+    </p>
+    <button type="submit" formaction="/deleteUser"  value="Delete user" >Delete user</button>
+</form>
+</body>
+</html>

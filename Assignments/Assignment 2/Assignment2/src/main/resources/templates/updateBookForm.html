@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Select the book you want to update</h1>
+<form action="#" th:action="@{/updateBookForm}" th:object="${book}" method="post">
+    <p>Price     <input type="text" th:field="*{price}" /></p>  <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</td>
+    <p>Quantity:    <input type="text" th:field="*{quantity}" /></p> <td th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}">Quantity Error</td>
+    <p>Isbn     <input type="text" th:field="*{isbn}" /></p> <td th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">Isbn Error</td>
+    <p><input type="submit" value="Validate book" />
+    </p>
+     <button type="submit" formaction="/updateBook"  value="Update book" >Update book</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Select author of the books you want to view</h1>
+<form action="#" th:action="@{/getBooksByAuthorForm}" th:object="${book}" method="post">
+    <p>Author:    <input type="text" th:field="*{author}" /></p>    <td th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author Error</td>
+    <p><input type="submit" value="Verify author" />
+    <button type="submit" formaction="/getBooksByAuthor"  value="Search book" >Search book</button>
+    </p>
+</form>
+</body>
+</html>
